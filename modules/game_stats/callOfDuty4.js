@@ -85,7 +85,7 @@ exports.exec = (Bastion, message, args) => {
       let scores = [];
       let pings = [];
       for (let i = 0; i < data.players.length; i++) {
-        players.push(data.players[i].name);
+        players.push(data.players[i].name.substring(0, 12));
       }
       for (let i = 0; i < data.players.length; i++) {
         scores.push(data.players[i].frags);
@@ -95,7 +95,7 @@ exports.exec = (Bastion, message, args) => {
       }
       stats.push(
         {
-          name: 'Player',
+          name: 'Player Name',
           value: '```http\n' + players.join('\n') + '```',
           inline: true
         },
