@@ -72,7 +72,7 @@ exports.exec = (Bastion, message, args) => {
           },
           {
             name: 'Mode',
-            value: '`' + data.players.length + '/' + data.maxplayers + '`',
+            value: '`' + data.raw.gametype + '`',
             inline: true
           }
         ],
